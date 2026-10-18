@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9fc">
+  <title>字间 · Glyph Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <aside id="tuning" aria-label="效果调节">
+    <div class="panel-header" id="panel-drag">
+      <button id="drag-handle" aria-label="移动面板，方向键微调" title="拖动移动，方向键微调"><span aria-hidden="true">⠿</span></button>
+      <div class="panel-title"><strong>字间 <span class="studio-label">GLYPH STUDIO</span></strong><span id="performance" title="动画回调频率与 JavaScript 绘制提交耗时">测量中</span></div>
+      <button id="panel-home" class="quiet" title="恢复右上角位置">归位</button>
+      <button id="panel-collapse" class="icon-button" aria-label="收起面板" aria-expanded="true" aria-controls="panel-body">−</button>
+    </div>
+    <div id="panel-body">
+      <div class="panel-tabs" id="panel-tabs" role="tablist" aria-label="参数分类"></div>
+      <div class="panel-content" id="panel-scroll">
+        <label class="preset-label" id="animation-presets">动效预设 <select id="preset"><option value="custom">自定义</option><option value="smooth">柔和流动</option><option value="crisp">清晰有力</option><option value="pixel">分格对比</option></select></label>
+        <div id="parameters"></div>
+        <section id="config-tools" hidden aria-label="更多设置">
+          <div class="config-heading">参数与预设<button id="reset-settings">恢复默认</button></div>
+          <p>参数自动保存。导出 JSON 可留存或分享。</p>
+          <div class="panel-actions"><button id="export-settings">导出参数</button><button id="import-settings">导入参数</button></div>
+          <textarea id="settings-json" aria-label="参数 JSON" placeholder="粘贴或导出参数 JSON" spellcheck="false"></textarea>
+        </section>
+      </div>
+      <div class="panel-footer">
+        <div class="panel-actions"><button id="preview-wave" class="primary">试一次波纹</button><button id="pause" aria-pressed="false">暂停动效</button><button id="panel-more" aria-expanded="false" aria-controls="config-tools">更多</button></div>
+        <p id="settings-status" role="status">实时调节 · 自动保存</p>
+      </div>
+    </div>
+  </aside>
+  <script src="input-mode.js"></script>
+  <script src="content.js"></script>
+  <script src="settings.js"></script>
+  <script src="ripple.js"></script>
+  <script src="ambient.js"></script>
+  <script src="tint.js"></script>
+  <script src="app.js"></script>
+  <script src="panel.js"></script>
+  <script src="appearance-panel.js"></script>
+  <script src="panel-position.js"></script>
+</body>
+</html>
