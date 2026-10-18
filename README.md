@@ -1,5 +1,14 @@
 # 字间 · Glyph Studio
 
+## DSH 插件版
+
+本项目是文字背景效果的独立编辑器，可调节文字、配色和动画参数。
+用于 DeepSeek Harness 的版本见
+[逍遥游 · Glyph Water 插件](https://github.com/Aimer779/dsh-xiaoyaoyou)。
+插件仅在新建会话页显示背景，进入普通对话后自动关闭。
+安装包与兼容版本见[插件发布页](https://github.com/Aimer779/dsh-xiaoyaoyou/releases)。
+需要安装 DSH 插件时，请使用插件仓库；本仓库用于调参与效果开发。
+
 可配置的本地文字背景工具。使用 Canvas 2D，无需安装依赖。
 
 ## 打开
